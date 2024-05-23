@@ -27,6 +27,7 @@ def index() -> rx.page:
             flex_direction="column",
             justify_content="center",
             align_items="center",
+            padding='2em'
         ),
         rx.section(
              rx.box(
@@ -68,7 +69,7 @@ def index() -> rx.page:
                     rx.heading('Ofrecemos distintos planes de estudio', as_='h2', font_size='1em'),
                     rx.text('Elige la forma de pago que más te interese'),
                 ),                
-                rx.link(rx.button('Contacto', background_color=styles.verde_oscuro, height='auto'), href="/contacto"),        
+                rx.link(rx.button('Contacto', background_color=styles.verde_oscuro), href="/contacto"),        
                 margin_left='1em',  
                 justify='between',
                 align='start'              

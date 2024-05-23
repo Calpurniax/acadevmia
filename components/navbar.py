@@ -1,15 +1,17 @@
 import reflex as rx
+import styles 
+
 import states.google_auth_state
 
 def navbar(user_logged: bool, text: str) -> rx.Component:
     return rx.flex(
         rx.hstack(
-            rx.heading("Academia de música"),
-            color="white",
+            rx.link(rx.heading("Academia de música online", as_="h1", font_size="1.5em", color='black'), href='/'
+            ),
         ),
         rx.spacer(),
         rx.hstack(
-            rx.color_mode.button(color="white"),
+            #rx.color_mode.button(color="white"),
             rx.cond(
                 user_logged,
                 rx.menu.root(
@@ -21,15 +23,16 @@ def navbar(user_logged: bool, text: str) -> rx.Component:
                         on_click=states.google_auth_state.Google_auth_state.logout,
                     ),
                 ),
-                rx.button(text, on_click=rx.redirect("/login")),
+                rx.button(text, background_color=styles.verde_oscuro, on_click=rx.redirect("/login")),
             ),
             
         ),
         position="fixed",
         top="0px",
-        background_color="rgba(0, 0, 0, 0.5)",
+        background_color=styles.naranja_oscuro,
         padding="1em",
-        height="4em",
+        height="5em",
         width="100%",
         z_index="5",
+        align="center"
     )

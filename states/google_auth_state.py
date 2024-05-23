@@ -4,6 +4,8 @@ import json
 import os
 import time
 
+import styles 
+
 from components.react_oauth_google import GoogleOAuthProvider, GoogleLogin
 from components.navbar import navbar
 from dotenv import load_dotenv
@@ -81,7 +83,7 @@ def login() -> rx.Component:
         show_navbar(),
         rx.box(
             GoogleLogin.create(on_success=Google_auth_state.on_success),
-            rx.button("Inicio", on_click=rx.redirect("/")),
+            rx.button("Volver a home", background_color=styles.verde_oscuro, margin_top='1em',on_click=rx.redirect("/")),
             background="linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25))",
             background_size="cover",
             background_position="center",
@@ -110,7 +112,7 @@ def client_area() -> rx.Component:
         show_navbar(),
         rx.box(
             rx.text(Google_auth_state.protected_content),
-            rx.button("Inicio", on_click=rx.redirect("/")),
+            rx.button("Volver a home",background_color=styles.verde_oscuro, margin_top='1em',on_click=rx.redirect("/")),
             background="linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25))",
             background_size="cover",
             background_position="center",
