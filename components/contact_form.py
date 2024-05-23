@@ -3,8 +3,7 @@ import reflex as rx
 from states.contact_form_state import contactFormState
 import styles 
 
-def contact_form():
-    rx.console.log('hola desde el formulario de contacto')
+def contact_form():      
     return rx.form(        
         rx.flex(
             rx.input(
@@ -28,11 +27,17 @@ def contact_form():
                 color_scheme='amber',   
                 required=True,               
                 ),              
-            rx.button("Enviar", type="submit", margin_top='1em', background_color=styles.verde_oscuro, border='solid 1px white'),            
+            rx.button("Enviar", type="submit", margin_top='1em', background_color=styles.verde_oscuro, border='solid 1px white'), 
+             rx.cond(
+               contactFormState.status_response == True,
+               rx.text('Mensaje enviado con éxito'),
+               rx.text('')
+            ),           
             direction="column",
             align="center",
             gap='1em',  
             width='100%',
+           
         ),
         on_submit=contactFormState.handle_submit,
         reset_on_submit=True,     
