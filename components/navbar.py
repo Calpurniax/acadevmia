@@ -1,5 +1,5 @@
 import reflex as rx
-import acadevmia.acadevmia as main_page
+import states.google_auth_state
 
 def navbar(user_logged: bool, text: str) -> rx.Component:
     return rx.flex(
@@ -18,7 +18,7 @@ def navbar(user_logged: bool, text: str) -> rx.Component:
                     ),
                     rx.menu.content(
                         rx.menu.item("Cerrar sesion"),
-                        on_click=main_page.Google_auth_state.logout,
+                        on_click=states.google_auth_state.Google_auth_state.logout,
                     ),
                 ),
                 rx.button(text, on_click=rx.redirect("/login")),
