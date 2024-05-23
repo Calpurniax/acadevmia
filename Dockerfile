@@ -7,10 +7,10 @@
 FROM python:3.10.12
 
 # If the service expects a different port, provide it here (f.e Render expects port 10000)
-ARG PORT=10000
+#ARG PORT=10000
 # Only set for local/direct access. When TLS is used, the API_URL is assumed to be the same as the frontend.
-ARG API_URL
-ENV PORT=$PORT API_URL=${API_URL:-http://localhost:$PORT}
+#ARG API_URL
+#ENV PORT=$PORT API_URL=${API_URL:-http://localhost:$PORT}
 
 # Install Caddy server inside image
 RUN apt-get update -y && apt-get install -y caddy && rm -rf /var/lib/apt/lists/*
