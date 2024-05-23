@@ -1,17 +1,32 @@
 import reflex as rx
 
 # from rxconfig import config
-from components.navbar import navbar
+import states.google_auth_state
 import styles 
 
-def index() -> rx.Component:
+def index() -> rx.page:
     # Welcome Page (Index)
     return rx.box(
-        navbar(),
-        rx.hstack(
-            rx.image(src="/hero.jpg", width="100%", height="auto", alt="Academia de música online"),
-            margin_top='5em', 
-            
+        states.google_auth_state.show_navbar(),
+        rx.box(
+            rx.heading(
+                'Accede a las mejores clases de música desde donde quieras',
+                color="white",
+                align="center",
+            ),
+            rx.text(
+                'A tu ritmo y desde cualquier dispositivo, podrás seguir tus clases online en streaming directo o conectarte en el horario que puedas.',
+                color="white",
+                align="center",
+            ),
+            background="linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/hero.jpg')",
+            background_size="cover",
+            background_position="center",
+            height="100vh",
+            display="flex",
+            flex_direction="column",
+            justify_content="center",
+            align_items="center",
         ),
         rx.section(
              rx.box(

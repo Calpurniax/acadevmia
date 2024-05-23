@@ -1,5 +1,5 @@
 import reflex as rx
-from pages import index
+from pages.index import index
 
 app = rx.App(
     theme = rx.theme(
@@ -8,4 +8,4 @@ app = rx.App(
         accent_color="cyan",
     )
 )
-app.add_page(index)
+app.add_page(index, route="/")

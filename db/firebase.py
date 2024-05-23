@@ -7,4 +7,16 @@ db = firestore.client()
 comments_ref = db.collection('comentarios')
 
 def add_comment(data):    
-    comments_ref.document(str(data['contact_email'])).set(data)
+   doc_ref= comments_ref.add(data)
+   response = search_comment(doc_ref)
+   return response
+   
+
+def search_comment(id):
+    doc = comments_ref.document(id).get()
+    # doc_ref = db.collection("cities").document("SF")
+    # doc = doc_ref.get()
+    if doc.exists:
+        return True
+    else:
+        return False
