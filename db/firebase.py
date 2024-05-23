@@ -11,8 +11,7 @@ comments_ref = db.collection('comentarios')
 def add_comment(data):  
     doc_ref = comments_ref.document()
     doc_ref.set(data)  
-    response = search_comment(doc_ref.id)
-    print(response) 
+    response = search_comment(doc_ref.id)    
     return response
 
 def search_comment(id):
