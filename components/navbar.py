@@ -18,8 +18,8 @@ def navbar(user_logged: bool, text: str) -> rx.Component:
                         rx.button(text),
                     ),
                     rx.menu.content(
-                        rx.menu.item("Cerrar sesion"),
-                        on_click=states.google_auth_state.Google_auth_state.logout,
+                        rx.menu.item("Acceder al área privada", on_click=rx.redirect("/private-area")),
+                        rx.menu.item("Cerrar sesion", on_click=states.google_auth_state.Google_auth_state.logout),
                     ),
                 ),
                 rx.button(text, background_color=styles.verde_oscuro, on_click=rx.redirect("/login")),
