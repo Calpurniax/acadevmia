@@ -10,8 +10,7 @@ def navbar(user_logged: bool, text: str) -> rx.Component:
             ),
         ),
         rx.spacer(),
-        rx.hstack(
-            #rx.color_mode.button(color="white"),
+        rx.hstack(           
             rx.cond(
                 user_logged,
                 rx.menu.root(
