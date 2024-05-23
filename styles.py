@@ -1,0 +1,6 @@
+verde= '#77E09A'
+naranja_oscuro= '#E0B677'
+morado= '#AC77E0'
+gris= '#82788B'
+verde_oscuro= '#4B6152'
+marron_oscuro= '#61584B'
