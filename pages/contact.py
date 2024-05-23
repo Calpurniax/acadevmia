@@ -1,11 +1,11 @@
 import reflex as rx
 
-from components.navbar import navbar
+import states.google_auth_state
 from components.contact_form import contact_form
 
 def contact():
     return rx.box(
-        navbar(),
+        states.google_auth_state.show_navbar(),
         rx.flex(
             rx.heading('¿Tienes alguna pregunta?', as_='h2', margin_bottom='1em'),
             contact_form(),
