@@ -126,3 +126,19 @@ def client_area() -> rx.Component:
         width="100%",
         direction="column",
     )
+
+@rx.page(route="/private-area", title="Acceso privado")
+@require_google_login
+def private_area() -> rx.Component:
+    return rx.box(
+        show_navbar(),
+        rx.flex(
+            rx.heading('Aquí es donde deberían estar los videos de las clases y esas cosas :=)', as_='h2', margin_bottom='1em'),
+            margin_top='6em', 
+            direction="column",
+            align="center",
+            justify="center",
+        ), 
+        width='90vw', 
+        height='90vh'
+    )
