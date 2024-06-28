@@ -1,4 +1,4 @@
-# Proyecto curso desarrollo de aplicaciones con Google Cloud
+# Proyecto probando Reflex con google Auth
 
 ## Importante para reflex
 - Crear el entorno virtual  
