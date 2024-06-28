@@ -9,13 +9,6 @@
 ```pip install -r requirements.txt```  
 - Arrancar reflex  
 ```reflex run```
-## Propuesta colores:
-  - Verde: #77E09A
-  - Naranja-oscuro: #E0B677
-  - Morado: #AC77E0
-  - Gris: #82788B
-  - Verde-oscuro:#4B6152
-  - Marrón-oscuro: #61584B
 
 ## Foto del Hero:
 Foto de [Kelly Sikkema](https://unsplash.com/es/@kellysikkema?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) en [Unsplash](https://unsplash.com/es/fotos/auriculares-negros-sobre-papel-blanco-de-impresora-HwU5H9Y6aL8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
