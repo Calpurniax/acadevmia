@@ -1,5 +1,7 @@
 # Probando Reflex con google Auth y firebase
 
+Web para una academia de música online, con Login Oauth de Google para los usuarios y conexión a firebase para guardar los mensajes de contacto
+
 ## Para arrancar el proyecto:
 - Crear el entorno virtual  
   ```py -3 -m venv .venv```
