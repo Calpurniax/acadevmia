@@ -1,6 +1,6 @@
 # Probando Reflex con google Auth
 
-## Importante para reflex
+## Para arrancar el proyecto:
 - Crear el entorno virtual  
   ```py -3 -m venv .venv```
 - Arrancar el entorno virtual  
