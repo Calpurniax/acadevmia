@@ -1,4 +1,4 @@
-# Proyecto probando Reflex con google Auth
+# Probando Reflex con google Auth
 
 ## Importante para reflex
 - Crear el entorno virtual  
