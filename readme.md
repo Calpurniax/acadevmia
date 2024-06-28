@@ -1,4 +1,4 @@
-# Probando Reflex con google Auth
+# Probando Reflex con google Auth y firebase
 
 ## Para arrancar el proyecto:
 - Crear el entorno virtual  
